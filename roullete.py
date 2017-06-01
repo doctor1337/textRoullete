@@ -95,17 +95,48 @@ def green():
 						
 def roullete():
 	import random
-	chance = (random.randint(1,100))
-	if chance < 49:
+	roulleteNo = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+	chance = (random.choice(roulleteNo))
+	if chance == 0:
+		land = "green"
+		green()
+	elif chance == 1:
 		land = "red"
-		red()
-	elif chance > 51:
+		black()
+	elif chance == 2:
+		land = "black"
+		black()
+	elif chance == 3:
+		land = "black"
+		black()
+	elif chance == 4:
+		land = "black"
+		black()
+	elif chance == 5:
+		land = "black"
+		black()
+	elif chance == 6:
+		land = "black"
+		black()
+	elif chance == 7:
 		land = "black"
 		black()
 	else:
-		land = "green"
-		green()
+		land  = "red"
+		red()
 
+def tryAgain():	
+		tryagain = input("Would you like to try again? (y/n)\n> ")
+		tryagain.lower()
+		if tryagain == "y":
+			setBalance()
+		elif tryagain == "n":
+			print("Ok, bye..")
+			exit()
+		else:
+			print("That's not valid")
+			tryAgain()
+		
 	
 def main():
 	if balance > 0:
@@ -130,16 +161,8 @@ def main():
 		print("\n         You have no more money")
 		print("________________________________________________")
 		print("\nThanks for playing!")
+		tryAgain()
 		
-		tryagain = input("Would you like to try again? (y/n)\n> ")
-		tryagain.lower()
-		if tryagain == "y":
-			setBalance()
-		elif tryagain == "n":
-			print("Ok, bye..")
-			exit()
-		else:
-			print("That's not valid")
 		
 setBalance()		
 main()
