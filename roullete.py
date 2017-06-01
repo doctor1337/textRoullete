@@ -101,7 +101,7 @@ def roullete():
 		land = "green"
 		green()
 	elif chance == 1:
-		land = "red"
+		land = "black"
 		black()
 	elif chance == 2:
 		land = "black"
