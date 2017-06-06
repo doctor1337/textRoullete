@@ -99,30 +99,39 @@ def roullete():
 	chance = (random.choice(roulleteNo))
 	if chance == 0:
 		land = "green"
+		print("\nIt landed on green")
 		green()
 	elif chance == 1:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 2:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 3:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 4:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 5:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 6:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	elif chance == 7:
 		land = "black"
+		print("\nIt landed on black")
 		black()
 	else:
 		land  = "red"
+		print("\nIt landed on red!")
 		red()
 
 def tryAgain():	
